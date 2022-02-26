@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Comentario from './components/Comentario';
+import Saludo from './components/Saludo';
 
 function App() {
+
+  const imagen = 'https://picsum.photos/200'  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>Comentarios</h1>
+        <Saludo nombre='Roberto' edad={30}/>
+        <hr/>
+        <h3>Comentarios</h3>
+        <Comentario
+          urlImagen = {imagen}
+          nombre= 'Roberto Morales'
+          texto = 'Esto es un comentario de Roberto'
+        />
     </div>
   );
 }
